@@ -1,6 +1,8 @@
 import 'package:bitirme_projesi/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'device/mobile.dart';
+
 void main() {
   runApp(
     MaterialApp(
@@ -23,12 +25,12 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     Future.delayed(
-      const Duration(seconds: 1),
+      const Duration(seconds: 0),
       () {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => LogInScreen(),
+            builder: (context) => MyBottomNavigation(),
           ),
         );
       },

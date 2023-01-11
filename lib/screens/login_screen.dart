@@ -1,3 +1,4 @@
+import 'package:bitirme_projesi/device/mobile.dart';
 import 'package:bitirme_projesi/reusable_widgets/login_button_reusable_widget.dart';
 import 'package:bitirme_projesi/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
@@ -80,8 +81,12 @@ class _LogInScreenState extends State<LogInScreen> {
                   height: 20,
                 ),
                 logInSignUpButton(context, true, () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomeScreen()));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MyBottomNavigation(),
+                    ),
+                  );
                 }),
                 signUpOption()
               ],
