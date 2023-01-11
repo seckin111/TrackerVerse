@@ -1,13 +1,14 @@
- import 'package:bitirme_projesi/login_screen.dart';
+import 'package:bitirme_projesi/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
-void main(){
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MyApp(
-    
-  )));
-
+void main() {
+  runApp(
+    MaterialApp(
+      title: 'TrackerVerse',
+      debugShowCheckedModeBanner: false,
+      home: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatefulWidget {
@@ -18,28 +19,30 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
-@override
+  @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds:2),
-    (){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>LogInScreen()));
-    }
-    
+    Future.delayed(
+      const Duration(seconds: 1),
+      () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => LogInScreen(),
+          ),
+        );
+      },
     );
   }
+
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
-      body:Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage("assets/splash.png"),
-          fit:BoxFit.cover
-          )
-        ),
-      )
-    );
+        body: Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage("assets/splash.png"), fit: BoxFit.cover),
+      ),
+    ));
   }
 }
