@@ -1,7 +1,9 @@
 import 'package:bitirme_projesi/utils/colors_utils.dart';
 import 'package:flutter/material.dart';
 
+import '../screens/discover_screen.dart';
 import '../screens/home_screen.dart';
+import '../screens/profile_screen.dart';
 
 class MyBottomNavigation extends StatefulWidget {
   const MyBottomNavigation({super.key});
@@ -15,8 +17,8 @@ class _MyBottomNavigationState extends State<MyBottomNavigation> {
 
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(), // My HomeScreen
-    // return DiscoverScreen(); // My DiscoverScreen
-    // return ProfileScreen(); // My ProfileScreen
+    DiscoverScreen(), // My DiscoverScreen
+    ProfileScreen(), // My ProfileScreen
   ];
 
   void _onItemTapped(int index) {
@@ -53,12 +55,18 @@ class _MyBottomNavigationState extends State<MyBottomNavigation> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Discover',
+            icon: Icon(
+              Icons.search,
+              size: 30.0,
+            ),
+            label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.local_activity_outlined),
-            label: 'My Picks',
+            icon: Icon(
+              Icons.person,
+              size: 30.0,
+            ),
+            label: 'My Page',
           ),
         ],
         showSelectedLabels: false,
