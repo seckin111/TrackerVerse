@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => MyBottomNavigation(),
+            builder: (context) => EntryPoint(),
           ),
         );
       },
@@ -40,11 +40,12 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage("assets/splash.png"), fit: BoxFit.cover),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("assets/splash.png"), fit: BoxFit.cover),
+        ),
       ),
-    ));
+    );
   }
 }

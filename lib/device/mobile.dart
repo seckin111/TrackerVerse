@@ -1,80 +1,102 @@
 import 'package:bitirme_projesi/utils/colors_utils.dart';
 import 'package:flutter/material.dart';
 
+import '../models/rive_asset.dart';
 import '../screens/discover_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/profile_screen.dart';
 
-class MyBottomNavigation extends StatefulWidget {
-  const MyBottomNavigation({super.key});
+import 'package:rive/rive.dart';
+
+import '../utils/rive_utils.dart';
+import '../widgets/animated_bar.dart';
+
+// Thst's it for Episode 4 :)
+// Let's see what we are gonna do in Episode 5
+// Thanks for watching
+
+class EntryPoint extends StatefulWidget {
+  const EntryPoint({super.key});
 
   @override
-  State<MyBottomNavigation> createState() => _MyBottomNavigationState();
+  State<EntryPoint> createState() => _EntryPointState();
 }
 
-class _MyBottomNavigationState extends State<MyBottomNavigation> {
+class _EntryPointState extends State<EntryPoint> {
+  RiveAsset selectedBottomNav = bottomNavs.first;
   int _selectedIndex = 0;
-
-  static const List<Widget> _widgetOptions = <Widget>[
-    HomeScreen(), // My HomeScreen
-    DiscoverScreen(), // My DiscoverScreen
-    ProfileScreen(), // My ProfileScreen
-  ];
-
-  void _onItemTapped(int index) {
-    setState(
-      () {
-        _selectedIndex = index;
-      },
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        mouseCursor: MouseCursor.uncontrolled,
-        selectedIconTheme: IconThemeData(
-          shadows: [
-            Shadow(
-              blurRadius: 40,
-              color: AppColors.primaryBlue,
-            )
-          ],
-        ),
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-              size: 30.0,
-            ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.search,
-              size: 30.0,
-            ),
-            label: 'Search',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person,
-              size: 30.0,
-            ),
-            label: 'My Page',
-          ),
+      resizeToAvoidBottomInset: false,
+      extendBody: true,
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: [
+          HomeScreen(),
+          DiscoverScreen(),
+          ProfileScreen(),
         ],
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        currentIndex: _selectedIndex,
-        unselectedItemColor: Color.fromRGBO(200, 200, 200, 60),
-        selectedItemColor: AppColors.primaryBlue,
-        onTap: _onItemTapped,
+      ),
+      backgroundColor: AppColors.primaryBlue,
+      bottomNavigationBar: SafeArea(
+        child: Container(
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            color: AppColors.primaryBlue.withOpacity(0.8),
+            borderRadius: const BorderRadius.all(Radius.circular(12)),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              ...List.generate(
+                bottomNavs.length,
+                (index) => GestureDetector(
+                  onTap: () {
+                    bottomNavs[index].input!.change(true);
+                    if (bottomNavs[index] != selectedBottomNav) {
+                      setState(() {
+                        selectedBottomNav = bottomNavs[index];
+                        _selectedIndex = index;
+                      });
+                    }
+                    Future.delayed(const Duration(seconds: 1), () {
+                      bottomNavs[index].input!.change(false);
+                    });
+                  },
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      AnimatedBar(
+                          isActive: bottomNavs[index] == selectedBottomNav),
+                      SizedBox(
+                        height: 44,
+                        width: 44,
+                        child: Opacity(
+                          opacity:
+                              bottomNavs[index] == selectedBottomNav ? 1 : 0.5,
+                          child: RiveAnimation.asset(
+                            bottomNavs.first.src,
+                            artboard: bottomNavs[index].artboard,
+                            onInit: (artboard) {
+                              StateMachineController controller =
+                                  RiveUtils.getRiveController(artboard,
+                                      stateMachineName:
+                                          bottomNavs[index].stateMachineName);
+
+                              bottomNavs[index].input =
+                                  controller.findSMI("active") as SMIBool;
+                            },
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

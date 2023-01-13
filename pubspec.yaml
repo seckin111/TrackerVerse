@@ -33,6 +33,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^1.1.6
+  rive: ^0.10.1
 
 dev_dependencies:
   flutter_lints: ^2.0.0

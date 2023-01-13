@@ -1,4 +1,4 @@
-import 'package:bitirme_projesi/reusable_widgets/login_button_reusable_widget.dart';
+import 'package:bitirme_projesi/widgets/login_button_reusable_widget.dart';
 import 'package:bitirme_projesi/utils/colors_utils.dart';
 import 'package:flutter/material.dart';
 

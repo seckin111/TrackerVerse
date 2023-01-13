@@ -1,5 +1,5 @@
 import 'package:bitirme_projesi/device/mobile.dart';
-import 'package:bitirme_projesi/reusable_widgets/login_button_reusable_widget.dart';
+import 'package:bitirme_projesi/widgets/login_button_reusable_widget.dart';
 import 'package:bitirme_projesi/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:bitirme_projesi/utils/colors_utils.dart';
@@ -84,7 +84,7 @@ class _LogInScreenState extends State<LogInScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => MyBottomNavigation(),
+                      builder: (context) => EntryPoint(),
                     ),
                   );
                 }),
