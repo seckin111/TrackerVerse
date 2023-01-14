@@ -1,7 +1,6 @@
-import 'package:bitirme_projesi/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'device/mobile.dart';
+import 'entry_point.dart';
 
 void main() {
   runApp(
@@ -41,9 +40,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/splash.png"), fit: BoxFit.cover),
+              image: AssetImage("assets/backgrounds/splash.png"),
+              fit: BoxFit.cover),
         ),
       ),
     );

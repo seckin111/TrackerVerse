@@ -1,19 +1,15 @@
 import 'package:bitirme_projesi/utils/colors_utils.dart';
 import 'package:flutter/material.dart';
 
-import '../models/rive_asset.dart';
-import '../screens/discover_screen.dart';
-import '../screens/home_screen.dart';
-import '../screens/profile_screen.dart';
+import 'models/rive_asset.dart';
+import 'screens/discover_screen.dart';
+import 'screens/home_screen.dart';
+import 'screens/profile_screen.dart';
 
 import 'package:rive/rive.dart';
 
-import '../utils/rive_utils.dart';
-import '../widgets/animated_bar.dart';
-
-// Thst's it for Episode 4 :)
-// Let's see what we are gonna do in Episode 5
-// Thanks for watching
+import 'utils/rive_utils.dart';
+import 'widgets/animated_bar.dart';
 
 class EntryPoint extends StatefulWidget {
   const EntryPoint({super.key});
@@ -24,7 +20,7 @@ class EntryPoint extends StatefulWidget {
 
 class _EntryPointState extends State<EntryPoint> {
   RiveAsset selectedBottomNav = bottomNavs.first;
-  int _selectedIndex = 0;
+  int _selectedIndex = 0; //starting page
   @override
   Widget build(BuildContext context) {
     return Scaffold(

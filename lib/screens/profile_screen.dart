@@ -35,7 +35,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   background: Stack(
                     children: <Widget>[
                       SvgPicture.asset(
-                        'assets/background.svg',
+                        'assets/backgrounds/profile_screen_background.svg',
                         fit: BoxFit.cover,
                       ),
                       Container(

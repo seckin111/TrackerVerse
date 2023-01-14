@@ -1,4 +1,4 @@
-import 'package:bitirme_projesi/device/mobile.dart';
+import 'package:bitirme_projesi/entry_point.dart';
 import 'package:bitirme_projesi/widgets/login_button_reusable_widget.dart';
 import 'package:bitirme_projesi/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
@@ -66,7 +66,7 @@ class _LogInScreenState extends State<LogInScreen> {
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
             child: Column(
               children: <Widget>[
-                logoWidget("assets/logo3.png"),
+                logoWidget("assets/logo/logo_beyaz.png"),
                 const SizedBox(
                   height: 30,
                 ),

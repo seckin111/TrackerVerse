@@ -1,7 +1,7 @@
 import 'package:bitirme_projesi/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 
-import '../device/mobile.dart';
+import '../entry_point.dart';
 
 class ResponsiveLayout extends StatelessWidget {
   final Widget mobileScreen;

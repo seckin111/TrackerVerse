@@ -17,16 +17,16 @@ class RiveAsset {
 
 List<RiveAsset> bottomNavs = [
   RiveAsset(
-    "assets/icons.riv",
+    "assets/icons/animated_icons.riv",
     artboard: "HOME",
     stateMachineName: "HOME_interactivity",
     title: "HOME",
   ),
-  RiveAsset("assets/icons.riv",
+  RiveAsset("assets/icons/animated_icons.riv",
       artboard: "SEARCH",
       stateMachineName: "SEARCH_Interactivity",
       title: "Search"),
-  RiveAsset("assets/icons.riv",
+  RiveAsset("assets/icons/animated_icons.riv",
       artboard: "USER",
       stateMachineName: "USER_Interactivity",
       title: "Profile"),

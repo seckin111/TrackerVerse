@@ -45,7 +45,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                logoWidget("assets/logo3.png"),
+                logoWidget("assets/logo/logo_beyaz.png"),
                 reusableTextField("Enter Username", Icons.person_outline, true,
                     _userNameTextController),
                 const SizedBox(

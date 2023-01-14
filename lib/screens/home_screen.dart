@@ -12,18 +12,20 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: ElevatedButton(
-          child: const Text("Log Out"),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => LogInScreen(),
-              ),
-            );
-          },
+    return SafeArea(
+      child: Scaffold(
+        body: Center(
+          child: ElevatedButton(
+            child: const Text("Log Out"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LogInScreen(),
+                ),
+              );
+            },
+          ),
         ),
       ),
     );
