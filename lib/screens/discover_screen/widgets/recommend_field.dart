@@ -41,7 +41,7 @@ class RecommendWidget extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
-                        "images/rec$i.jpg",
+                        "assets/series/recommend/rec$i.jpg",
                         height: 100,
                         width: 150,
                         fit: BoxFit.cover,
