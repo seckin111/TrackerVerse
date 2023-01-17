@@ -2,9 +2,9 @@ import 'package:bitirme_projesi/utils/colors_utils.dart';
 import 'package:flutter/material.dart';
 
 import 'models/rive_asset.dart';
-import 'screens/discover_screen.dart';
+import 'screens/discover_screen/discover_screen.dart';
 import 'screens/home_screen.dart';
-import 'screens/profile_screen.dart';
+import 'screens/profile_screen/profile_screen.dart';
 
 import 'package:rive/rive.dart';
 

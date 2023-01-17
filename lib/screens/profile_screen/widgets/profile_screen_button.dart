@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../../episode_info.dart';
+
 class PSButton extends StatefulWidget {
+  const PSButton({super.key});
+
   @override
   _PSButtonState createState() => _PSButtonState();
 }
@@ -32,7 +36,15 @@ class _PSButtonState extends State<PSButton> {
           height: 50,
         ),
         ElevatedButton(
-          onPressed: _selectButton1,
+          onPressed: () {
+            _selectButton1();
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => EpisodeInfo(),
+              ),
+            );
+          },
           style: TextButton.styleFrom(
             maximumSize: Size(500, 200),
             foregroundColor: _button1Selected
@@ -46,7 +58,13 @@ class _PSButtonState extends State<PSButton> {
           width: 10,
         ),
         ElevatedButton(
-          onPressed: _selectButton2,
+          onPressed: () {
+            _selectButton2();
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => EpisodeInfo()),
+            );
+          },
           style: TextButton.styleFrom(
             minimumSize: Size(100, 50),
             maximumSize: Size(100, 50),
