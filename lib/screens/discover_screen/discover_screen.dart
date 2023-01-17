@@ -81,6 +81,7 @@ class DiscoverScreen extends StatelessWidget {
               UpcomingWidget(),
               SizedBox(height: 40),
               NewSeriesWidget(),
+              SizedBox(height: 10),
             ],
           ),
         ),
