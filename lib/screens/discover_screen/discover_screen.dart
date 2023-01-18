@@ -11,7 +11,7 @@ class DiscoverScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xff34495e),
+        backgroundColor: Color.fromARGB(255, 27, 40, 53),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -50,7 +50,7 @@ class DiscoverScreen extends StatelessWidget {
                 margin: EdgeInsets.symmetric(horizontal: 10),
                 height: 60,
                 decoration: BoxDecoration(
-                  color: Color(0xFF292B37),
+                  color: AppColors.primaryBlue,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Row(
@@ -62,7 +62,7 @@ class DiscoverScreen extends StatelessWidget {
                     ),
                     Container(
                       width: 300,
-                      margin: EdgeInsets.only(left: 5),
+                      margin: EdgeInsets.only(left: 5, bottom: 5),
                       child: TextFormField(
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(

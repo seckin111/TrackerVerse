@@ -20,11 +20,16 @@ class RecommendWidget extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              Text(
-                "See All",
-                style: TextStyle(
-                  color: Colors.white54,
-                  fontSize: 16,
+              MaterialButton(
+                enableFeedback: true,
+                onPressed: null,
+                mouseCursor: SystemMouseCursors.click,
+                child: Text(
+                  "See All",
+                  style: TextStyle(
+                    color: Colors.white54,
+                    fontSize: 16,
+                  ),
                 ),
               ),
             ],

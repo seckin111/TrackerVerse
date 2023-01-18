@@ -1,3 +1,4 @@
+import 'package:bitirme_projesi/utils/colors_utils.dart';
 import 'package:flutter/material.dart';
 
 import 'recommend_field.dart';
@@ -17,7 +18,7 @@ class SeriesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff0a3340),
+      backgroundColor: AppColors.primaryBlue,
       body: SafeArea(
         child: Stack(
           children: [
@@ -74,7 +75,7 @@ class SeriesPage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(20),
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.purple.withOpacity(0.5),
+                                  color: AppColors.fourthBlue.withOpacity(0.5),
                                   spreadRadius: 1,
                                   blurRadius: 8,
                                 ),
@@ -96,10 +97,10 @@ class SeriesPage extends StatelessWidget {
                             width: 80,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(40),
-                              color: Colors.purple,
+                              color: AppColors.fourthBlue,
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.purple.withOpacity(0.5),
+                                  color: AppColors.fourthBlue.withOpacity(0.5),
                                   spreadRadius: 2,
                                   blurRadius: 8,
                                 ),

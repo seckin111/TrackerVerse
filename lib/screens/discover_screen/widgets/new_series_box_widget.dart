@@ -1,3 +1,4 @@
+import 'package:bitirme_projesi/utils/colors_utils.dart';
 import 'package:flutter/material.dart';
 
 import 'series_page_widget.dart';
@@ -37,11 +38,11 @@ class NewSeriesBox extends StatelessWidget {
         height: 300,
         margin: EdgeInsets.only(left: 10),
         decoration: BoxDecoration(
-          color: Color(0xFF292B37),
+          color: AppColors.primaryBlue,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
-              color: Color(0xFF292B37).withOpacity(0.5),
+              color: AppColors.primaryBlue.withOpacity(0.5),
               spreadRadius: 2,
               blurRadius: 6,
             )
