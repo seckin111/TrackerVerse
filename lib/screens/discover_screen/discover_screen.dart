@@ -11,7 +11,7 @@ class DiscoverScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 27, 40, 53),
+        backgroundColor: AppColors.backGround,
         body: SingleChildScrollView(
           child: Column(
             children: [

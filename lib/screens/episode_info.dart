@@ -506,7 +506,7 @@ class _TestState extends State<Test> {
                         style: TextStyle(fontSize: 20.0, color: Colors.white),
                       ),
                       Text(
-                        "The Lonesome Death of Hattie Carroll",
+                        "The Lonesome Death",
                         style: TextStyle(fontSize: 20.0, color: Colors.white),
                       ),
                       RoundCheckbox(),

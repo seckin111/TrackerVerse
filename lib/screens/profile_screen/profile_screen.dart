@@ -3,6 +3,7 @@ import 'package:bitirme_projesi/utils/series_info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../discover_screen/discover_screen.dart';
 import 'widgets/show_widget.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -13,15 +14,29 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  bool _isButton1Selected = true;
-  bool _isButton2Selected = true;
+  bool _button1Selected = true;
+  bool _button2Selected = false;
+
+  void _selectButton1() {
+    setState(() {
+      _button1Selected = true;
+      _button2Selected = false;
+    });
+  }
+
+  void _selectButton2() {
+    setState(() {
+      _button1Selected = false;
+      _button2Selected = true;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: Container(
-          color: AppColors.primaryBlue,
+          color: AppColors.backGround,
           child: CustomScrollView(
             slivers: [
               SliverAppBar(
@@ -109,25 +124,26 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     ),
                                   ),
                                   SizedBox(height: 30.0),
-                                  Container(
-                                    width: 220,
-                                    height: 44.0,
-                                    decoration: BoxDecoration(
-                                      color: _isButton1Selected
-                                          ? Color.fromARGB(255, 2, 18, 32)
-                                          : Color.fromARGB(255, 220, 13, 13),
-                                      borderRadius: BorderRadius.circular(10.0),
+                                  ElevatedButton(
+                                    onPressed: () {
+                                      _selectButton1();
+                                      // Navigator.push(
+                                      //   context,
+                                      //   MaterialPageRoute(
+                                      //       builder: (context) =>
+                                      //           DiscoverScreen()),
+                                      // );
+                                    },
+                                    style: TextButton.styleFrom(
+                                      maximumSize: Size(500, 200),
+                                      foregroundColor: _button1Selected
+                                          ? Color.fromARGB(255, 187, 190, 0)
+                                          : Color.fromARGB(239, 255, 255, 255),
+                                      backgroundColor:
+                                          Color.fromARGB(255, 0, 0, 0),
                                     ),
-                                    child: ElevatedButton(
-                                      child: Text('Watching'),
-                                      onPressed: () {
-                                        setState(() {
-                                          _isButton1Selected = true;
-                                          _isButton2Selected = false;
-                                        });
-                                      },
-                                    ),
-                                  )
+                                    child: Text('Watching'),
+                                  ),
                                 ],
                               ),
                               const SizedBox(width: 5.0),
@@ -148,26 +164,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     ),
                                   ),
                                   SizedBox(height: 30.0),
-                                  Container(
-                                    width: 220,
-                                    height: 44.0,
-                                    decoration: BoxDecoration(
-                                      color: _isButton2Selected
-                                          ? Color.fromARGB(255, 16, 55, 18)
-                                          : Color.fromARGB(255, 192, 19, 19),
-                                      borderRadius: BorderRadius.circular(10.0),
+                                  ElevatedButton(
+                                    onPressed: () {
+                                      _selectButton2();
+                                      // Navigator.push(
+                                      //   context,
+                                      //   MaterialPageRoute(
+                                      //       builder: (context) =>
+                                      //           DiscoverScreen()),
+                                      // );
+                                    },
+                                    style: TextButton.styleFrom(
+                                      minimumSize: Size(100, 50),
+                                      maximumSize: Size(100, 50),
+                                      foregroundColor: _button2Selected
+                                          ? Color.fromARGB(255, 187, 190, 0)
+                                          : Color.fromARGB(239, 255, 255, 255),
+                                      backgroundColor:
+                                          Color.fromARGB(255, 0, 0, 0),
                                     ),
-                                    child: ElevatedButton(
-                                      child: Text('Watched'),
-                                      onPressed: () {
-                                        setState(() {
-                                          _isButton1Selected = false;
-                                          print(_isButton1Selected);
-                                          _isButton2Selected = true;
-                                        });
-                                      },
-                                    ),
-                                  )
+                                    child: Text('Watched'),
+                                  ),
                                 ],
                               ),
                             ],

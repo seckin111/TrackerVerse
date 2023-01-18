@@ -1,3 +1,4 @@
+import 'package:bitirme_projesi/screens/discover_screen/discover_screen.dart';
 import 'package:bitirme_projesi/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -41,7 +42,7 @@ class _PSButtonState extends State<PSButton> {
             _selectButton1();
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => HomeScreen()),
+              MaterialPageRoute(builder: (context) => DiscoverScreen()),
             );
           },
           style: TextButton.styleFrom(
@@ -61,7 +62,7 @@ class _PSButtonState extends State<PSButton> {
             _selectButton2();
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => HomeScreen()),
+              MaterialPageRoute(builder: (context) => DiscoverScreen()),
             );
           },
           style: TextButton.styleFrom(

@@ -10,4 +10,5 @@ class AppColors {
   static Color tertiaryBlue = const Color(0xFF016293); // Sea Blue
   static Color fourthBlue = const Color(0xFF007BB8); // Star Command Blue
   static Color white = const Color(0xFFFFFFFF); // White
+  static Color backGround = const Color(0xFF1b2835); // BackGround
 }

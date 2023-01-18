@@ -120,8 +120,8 @@ final Map<String, Series> seriesList = {
     serisCompletionPercentetion: 10,
   ),
   '13': Series(
-    seriesName: 'The Vikings',
-    seriesImageHorizontal: 'assets/series/the_vikings.jpg',
+    seriesName: 'Vikings',
+    seriesImageHorizontal: 'assets/series/vikings.jpg',
     seriesImageVertical: '',
     seriesDescription:
         "The Vikings is a historical drama television series written and created by Michael Hirst for the History channel.",
