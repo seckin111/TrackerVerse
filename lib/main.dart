@@ -1,3 +1,4 @@
+import 'package:bitirme_projesi/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'entry_point.dart';
 
@@ -23,12 +24,12 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     Future.delayed(
-      const Duration(seconds: 0),
+      const Duration(seconds: 1),
       () {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => EntryPoint(),
+            builder: (context) => LogInScreen(),
           ),
         );
       },
