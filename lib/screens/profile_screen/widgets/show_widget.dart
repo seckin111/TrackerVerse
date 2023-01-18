@@ -1,26 +1,69 @@
 import 'package:flutter/material.dart';
 
-class ImageWidget extends StatelessWidget {
-  final int index;
+import '../../../utils/series_info.dart';
 
-  const ImageWidget({required this.index});
+class ImageWidget extends StatelessWidget {
+  final String seriesID;
+  const ImageWidget({required this.seriesID});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 180,
-      width: 200,
-      margin: const EdgeInsets.all(4.0),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-        border: Border.all(
-          color: Colors.grey,
-          width: 1.0,
-        ),
-        image: DecorationImage(
-          image: NetworkImage('https://picsum.photos/200/300?random=$index'),
-          fit: BoxFit.cover,
-        ),
+        borderRadius: BorderRadius.circular(18.0),
+      ),
+      padding: const EdgeInsets.all(10.0),
+      child: Stack(
+        fit: StackFit.expand,
+        children: <Widget>[
+          ClipRRect(
+            borderRadius: BorderRadius.circular(16.0),
+            child: Image.network(
+              seriesList[seriesID]!.seriesImageHorizontal,
+              fit: BoxFit.cover,
+            ),
+          ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(16.0),
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Color.fromARGB(151, 0, 0, 0),
+                    Color.fromARGB(255, 0, 0, 0).withOpacity(0.9),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  seriesList[seriesID]!.serisCompletionPercentetion.toString() +
+                      '%',
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 54.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  seriesList[seriesID]!.seriesName,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20.0,
+                  ),
+                ),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

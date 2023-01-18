@@ -1,4 +1,5 @@
 import 'package:bitirme_projesi/utils/colors_utils.dart';
+import 'package:bitirme_projesi/utils/series_info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -204,6 +205,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 }
 
+int seriesCount = 1;
+
 Widget buildImages() => SliverToBoxAdapter(
       child: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -212,7 +215,9 @@ Widget buildImages() => SliverToBoxAdapter(
         ),
         shrinkWrap: true,
         primary: false,
-        itemCount: 100,
-        itemBuilder: (context, index) => ImageWidget(index: index),
+        itemCount: seriesList.length,
+        itemBuilder: (context, index) => ImageWidget(
+          seriesID: '${seriesCount + index}',
+        ),
       ),
     );
