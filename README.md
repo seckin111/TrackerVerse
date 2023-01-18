@@ -1,16 +1,10 @@
-# bitirme_projesi
 
-A new Flutter project.
+# TrackerVerse (Bitirme Projesi)
 
-## Getting Started
+Bu uygulamamızda bir dizide izlediğiniz bölümleri işaretleyebilir ve nerede kaldığınızı uzun zamanlar geçse dahi bulabilirsiniz.Keşfet sayfamızdan yeni gelecek dizilerden haberdar olabilir aynı zamanda sizin için önerilenleri görebilirsiniz.İzlediklerinizden zevk alın TrackerVerse ile kalın.
 
-This project is a starting point for a Flutter application.
+## Projede Emeği geçenler
 
-A few resources to get you started if this is your first Flutter project:
+Mehmet Can Kaya (211216058)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Seçkin Yılmaz (211216053)
