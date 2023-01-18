@@ -1,6 +1,5 @@
 import 'package:bitirme_projesi/screens/login_screen.dart';
 import 'package:flutter/material.dart';
-import 'entry_point.dart';
 
 void main() {
   runApp(
@@ -24,7 +23,7 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     Future.delayed(
-      const Duration(seconds: 1),
+      const Duration(seconds: 2),
       () {
         Navigator.push(
           context,
@@ -42,7 +41,7 @@ class _MyAppState extends State<MyApp> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/backgrounds/splash.png"),
+              image: AssetImage("assets/backgrounds/splash_screen.png"),
               fit: BoxFit.cover),
         ),
       ),
