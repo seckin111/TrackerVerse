@@ -1,3 +1,4 @@
+import 'package:bitirme_projesi/screens/episode_info.dart';
 import 'package:bitirme_projesi/utils/colors_utils.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +30,7 @@ class _EntryPointState extends State<EntryPoint> {
       body: IndexedStack(
         index: _selectedIndex,
         children: [
-          HomeScreen(),
+          EpisodeInfo(),
           DiscoverScreen(),
           ProfileScreen(),
         ],
