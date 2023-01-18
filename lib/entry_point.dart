@@ -30,7 +30,11 @@ class _EntryPointState extends State<EntryPoint> {
       body: IndexedStack(
         index: _selectedIndex,
         children: [
-          EpisodeInfo(),
+          EpisodeInfo(
+            seriesImage: "assets/series/breaking_bad.jpg",
+            seriesTitle: "Breaking Bad",
+            seriesGenre: "Crime, Drama, Thriller",
+          ),
           DiscoverScreen(),
           ProfileScreen(),
         ],

@@ -4,94 +4,125 @@ import 'package:flutter_svg/svg.dart';
 
 import '../widgets/rounded_check_box.dart';
 
-class EpisodeInfo extends StatefulWidget {
-  const EpisodeInfo({super.key});
+import 'package:bitirme_projesi/utils/colors_utils.dart';
+import 'package:flutter/material.dart';
 
-  @override
-  State<EpisodeInfo> createState() => _EpisodeInfoState();
-}
+class EpisodeInfo extends StatelessWidget {
+  final String seriesImage;
+  final String seriesTitle;
+  final String seriesGenre;
 
-class _EpisodeInfoState extends State<EpisodeInfo> {
-  bool checkBoxValue = false;
+  const EpisodeInfo({
+    super.key,
+    required this.seriesImage,
+    required this.seriesTitle,
+    required this.seriesGenre,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        child: CustomScrollView(
-          slivers: [
-            SliverAppBar(
-              backgroundColor: AppColors.primaryBlue,
-              automaticallyImplyLeading: true,
-              floating: true,
-              pinned: true,
-              expandedHeight: 280.0,
-              flexibleSpace: FlexibleSpaceBar(
-                collapseMode: CollapseMode.pin,
-                centerTitle: true,
-                background: Stack(
-                  children: <Widget>[
-                    Stack(
-                      fit: StackFit.expand,
-                      children: [
-                        Image.asset(
-                          'assets/series/breaking_bad.jpg',
-                          fit: BoxFit.cover,
-                        ),
-                      ],
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [
-                            Colors.transparent,
-                            Colors.black.withOpacity(0.6),
-                          ],
-                        ),
+    return Scaffold(
+      backgroundColor: AppColors.primaryBlue,
+      body: SafeArea(
+        child: Stack(
+          children: [
+            Opacity(
+              opacity: 0.4,
+              child: Image.asset(
+                seriesImage,
+                height: 280,
+                width: double.infinity,
+                fit: BoxFit.cover,
+              ),
+            ),
+            SingleChildScrollView(
+              child: SafeArea(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: 10,
+                        horizontal: 25,
                       ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.only(left: 20.0, bottom: 20.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        // mainAxisSize: MainAxisSize.min,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const SizedBox(height: 10.0),
-                          const Text(
-                            "Breaking Bad",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 30.0,
+                          InkWell(
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                            child: Icon(
+                              Icons.arrow_back,
+                              color: Colors.white70,
+                              size: 30,
                             ),
                           ),
-                          const SizedBox(height: 10.0),
-                          const Text(
-                            "Crime, Drama, Thriller",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16.0,
+                          InkWell(
+                            onTap: () {},
+                            child: Icon(
+                              Icons.favorite_border,
+                              color: Colors.white70,
+                              size: 35,
                             ),
                           ),
                         ],
                       ),
                     ),
+                    SizedBox(height: 60),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: AppColors.fourthBlue.withOpacity(0.5),
+                                  spreadRadius: 1,
+                                  blurRadius: 8,
+                                ),
+                              ],
+                            ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image.asset(
+                                seriesImage,
+                                height: 250,
+                                width: 180,
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ),
+                          Column(
+                            children: [
+                              Text(
+                                seriesTitle,
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              Text(
+                                seriesGenre,
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Test(),
                   ],
                 ),
               ),
-              actions: [
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.settings,
-                    color: Colors.white,
-                  ),
-                ),
-              ],
             ),
-            episodes(),
           ],
         ),
       ),
@@ -99,7 +130,17 @@ class _EpisodeInfoState extends State<EpisodeInfo> {
   }
 }
 
-Widget episodes() => SliverToBoxAdapter(
+class Test extends StatefulWidget {
+  const Test({super.key});
+
+  @override
+  State<Test> createState() => _TestState();
+}
+
+class _TestState extends State<Test> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
       child: Row(
         children: [
           Expanded(
@@ -478,3 +519,5 @@ Widget episodes() => SliverToBoxAdapter(
         ],
       ),
     );
+  }
+}

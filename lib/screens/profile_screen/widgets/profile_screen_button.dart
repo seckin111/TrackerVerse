@@ -1,3 +1,4 @@
+import 'package:bitirme_projesi/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../episode_info.dart';
@@ -40,9 +41,7 @@ class _PSButtonState extends State<PSButton> {
             _selectButton1();
             Navigator.push(
               context,
-              MaterialPageRoute(
-                builder: (context) => EpisodeInfo(),
-              ),
+              MaterialPageRoute(builder: (context) => HomeScreen()),
             );
           },
           style: TextButton.styleFrom(
@@ -62,7 +61,7 @@ class _PSButtonState extends State<PSButton> {
             _selectButton2();
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => EpisodeInfo()),
+              MaterialPageRoute(builder: (context) => HomeScreen()),
             );
           },
           style: TextButton.styleFrom(
