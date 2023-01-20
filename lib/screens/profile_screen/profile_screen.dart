@@ -117,7 +117,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     ),
                                   ),
                                   Text(
-                                    "0",
+                                    "250",
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 14.0,
@@ -157,7 +157,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     ),
                                   ),
                                   Text(
-                                    "0",
+                                    "140",
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 14.0,

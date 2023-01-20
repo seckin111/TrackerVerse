@@ -8,6 +8,80 @@ final Map<String, Series> seriesList = {
     seriesGenre: "Crime/Drama",
     seriesRating: "9.5",
     serisCompletionPercentetion: 32,
+    seasons: {
+      1: [
+        "Pilot",
+        "Cat's in the Bag...",
+        "...And the Bag's in the River",
+        "Cancer Man",
+        "Gray Matter",
+        "Crazy Handful of Nothin'",
+        "A No-Rough-Stuff-Type Deal",
+      ],
+      2: [
+        "Seven Thirty-Seven",
+        "Grilled",
+        "Bit by a Dead Bee",
+        "Down",
+        "Breakage",
+        "Peakaboo",
+        "Negro y Azul",
+        "Better Call Saul",
+        "4 Days Out",
+        "Over",
+        "Mandala",
+        "Phoenix",
+        "ABQ",
+      ],
+      3: [
+        "No Más",
+        "Caballo sin Nombre",
+        "I.F.T.",
+        "Green Light",
+        "Mas",
+        "Sunset",
+        "One Minute",
+        "I See You",
+        "Kafkaesque",
+        "Fly",
+        "Abiquiu",
+        "Half Measures",
+        "Full Measure",
+      ],
+      4: [
+        "Box Cutter",
+        "Thirty-Eight Snub",
+        "Open House",
+        "Bullet Points",
+        "Shotgun",
+        "Cornered",
+        "Problem Dog",
+        "Hermanos",
+        "Bug",
+        "Salud",
+        "Crawl Space",
+        "End Times",
+        "Face Off",
+      ],
+      5: [
+        "Live Free or Die",
+        "Madrigal",
+        "Hazard Pay",
+        "Fifty-One",
+        "Dead Freight",
+        "Buyout",
+        "Say My Name",
+        "Gliding Over All",
+        "Blood Money",
+        "Buried",
+        "Confessions",
+        "Rabid Dog",
+        "To'hajiilee",
+        "Ozymandias",
+        "Granite State",
+        "Felina"
+      ],
+    },
   ),
   '2': Series(
     seriesName: 'Better Call Saul',
@@ -18,6 +92,10 @@ final Map<String, Series> seriesList = {
     seriesGenre: "Crime/Drama",
     seriesRating: "9.5",
     serisCompletionPercentetion: 45,
+    seasons: {
+      1: ['Episode 1', 'Episode 2', 'Episode 3'],
+      2: ['Episode 4', 'Episode 5', 'Episode 6']
+    },
   ),
   '3': Series(
     seriesName: 'Stranger Things',
@@ -28,6 +106,10 @@ final Map<String, Series> seriesList = {
     seriesGenre: "Fantastic/Mystery",
     seriesRating: "9.5",
     serisCompletionPercentetion: 55,
+    seasons: {
+      1: ['Episode 1', 'Episode 2', 'Episode 3'],
+      2: ['Episode 4', 'Episode 5', 'Episode 6']
+    },
   ),
   '4': Series(
     seriesName: 'Peaky Blinders',
@@ -38,6 +120,10 @@ final Map<String, Series> seriesList = {
     seriesGenre: "Crime/Drama",
     seriesRating: "9.5",
     serisCompletionPercentetion: 65,
+    seasons: {
+      1: ['Episode 1', 'Episode 2', 'Episode 3'],
+      2: ['Episode 4', 'Episode 5', 'Episode 6']
+    },
   ),
   '5': Series(
     seriesName: 'The Walking Dead',
@@ -48,6 +134,10 @@ final Map<String, Series> seriesList = {
     seriesGenre: "Horror/Drama",
     seriesRating: "9.5",
     serisCompletionPercentetion: 75,
+    seasons: {
+      1: ['Episode 1', 'Episode 2', 'Episode 3'],
+      2: ['Episode 4', 'Episode 5', 'Episode 6']
+    },
   ),
   '6': Series(
     seriesName: 'The Witcher',
@@ -58,6 +148,10 @@ final Map<String, Series> seriesList = {
     seriesGenre: "Fantasy/Action",
     seriesRating: "9.5",
     serisCompletionPercentetion: 85,
+    seasons: {
+      1: ['Episode 1', 'Episode 2', 'Episode 3'],
+      2: ['Episode 4', 'Episode 5', 'Episode 6']
+    },
   ),
   '7': Series(
     seriesName: 'The Mandalorian',
@@ -68,6 +162,10 @@ final Map<String, Series> seriesList = {
     seriesGenre: "Fantasy/Action",
     seriesRating: "9.5",
     serisCompletionPercentetion: 95,
+    seasons: {
+      1: ['Episode 1', 'Episode 2', 'Episode 3'],
+      2: ['Episode 4', 'Episode 5', 'Episode 6']
+    },
   ),
   '8': Series(
     seriesName: 'Dark',
@@ -78,6 +176,10 @@ final Map<String, Series> seriesList = {
     seriesGenre: "Fantastic/Mystery",
     seriesRating: "9.5",
     serisCompletionPercentetion: 45,
+    seasons: {
+      1: ['Episode 1', 'Episode 2', 'Episode 3'],
+      2: ['Episode 4', 'Episode 5', 'Episode 6']
+    },
   ),
   '9': Series(
     seriesName: 'The Last Kingdom',
@@ -88,6 +190,10 @@ final Map<String, Series> seriesList = {
     seriesGenre: "Fantastic/Mystery",
     seriesRating: "9.5",
     serisCompletionPercentetion: 55,
+    seasons: {
+      1: ['Episode 1', 'Episode 2', 'Episode 3'],
+      2: ['Episode 4', 'Episode 5', 'Episode 6']
+    },
   ),
   '10': Series(
     seriesName: 'Merlin',
@@ -98,6 +204,10 @@ final Map<String, Series> seriesList = {
     seriesGenre: "Fantastic/Mystery",
     seriesRating: "9.5",
     serisCompletionPercentetion: 65,
+    seasons: {
+      1: ['Episode 1', 'Episode 2', 'Episode 3'],
+      2: ['Episode 4', 'Episode 5', 'Episode 6']
+    },
   ),
   '11': Series(
     seriesName: 'Game of Thrones',
@@ -108,6 +218,10 @@ final Map<String, Series> seriesList = {
     seriesGenre: "Fantastic/Mystery",
     seriesRating: "9.5",
     serisCompletionPercentetion: 75,
+    seasons: {
+      1: ['Episode 1', 'Episode 2', 'Episode 3'],
+      2: ['Episode 4', 'Episode 5', 'Episode 6']
+    },
   ),
   '12': Series(
     seriesName: 'The Last Of Us',
@@ -118,6 +232,10 @@ final Map<String, Series> seriesList = {
     seriesGenre: "Fantastic/Mystery",
     seriesRating: "9.5",
     serisCompletionPercentetion: 10,
+    seasons: {
+      1: ['Episode 1', 'Episode 2', 'Episode 3'],
+      2: ['Episode 4', 'Episode 5', 'Episode 6']
+    },
   ),
   '13': Series(
     seriesName: 'Vikings',
@@ -128,6 +246,9 @@ final Map<String, Series> seriesList = {
     seriesGenre: "Fantastic/Mystery",
     seriesRating: "9.5",
     serisCompletionPercentetion: 20,
+    seasons: {
+      1: ['Episode 1', 'Episode 2', 'Episode 3'],
+    },
   ),
   '14': Series(
     seriesName: 'Wednesday',
@@ -138,6 +259,10 @@ final Map<String, Series> seriesList = {
     seriesGenre: "Fantastic/Mystery",
     seriesRating: "9.5",
     serisCompletionPercentetion: 30,
+    seasons: {
+      1: ['Episode 1', 'Episode 2', 'Episode 3'],
+      2: ['Episode 4', 'Episode 5', 'Episode 6']
+    },
   ), // diğer diziler
 };
 
@@ -149,6 +274,7 @@ class Series {
   final int serisCompletionPercentetion;
   final String seriesGenre;
   final String seriesRating;
+  final Map<int, List<String>> seasons;
 
   Series({
     required this.seriesName,
@@ -158,5 +284,6 @@ class Series {
     required this.serisCompletionPercentetion,
     required this.seriesGenre,
     required this.seriesRating,
+    required this.seasons,
   });
 }
