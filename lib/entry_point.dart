@@ -1,10 +1,10 @@
-import 'package:bitirme_projesi/screens/episode_info.dart';
+import 'package:bitirme_projesi/screens/home_screen/episode_info.dart';
 import 'package:bitirme_projesi/utils/colors_utils.dart';
 import 'package:flutter/material.dart';
 
 import 'models/rive_asset.dart';
 import 'screens/discover_screen/discover_screen.dart';
-import 'screens/home_screen.dart';
+import 'screens/home_screen/home_screen.dart';
 import 'screens/profile_screen/profile_screen.dart';
 
 import 'package:rive/rive.dart';
@@ -30,11 +30,7 @@ class _EntryPointState extends State<EntryPoint> {
       body: IndexedStack(
         index: _selectedIndex,
         children: [
-          EpisodeInfo(
-            seriesImage: "assets/series/breaking_bad.jpg",
-            seriesTitle: "Breaking Bad",
-            seriesGenre: "Crime, Drama, Thriller",
-          ),
+          HomeScreen2(),
           DiscoverScreen(),
           ProfileScreen(),
         ],

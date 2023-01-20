@@ -1,4 +1,5 @@
-import 'package:bitirme_projesi/screens/login_screen.dart';
+import 'package:bitirme_projesi/entry_point.dart';
+import 'package:bitirme_projesi/screens/authentication_screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

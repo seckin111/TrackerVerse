@@ -1,8 +1,8 @@
 import 'package:bitirme_projesi/screens/discover_screen/discover_screen.dart';
-import 'package:bitirme_projesi/screens/home_screen.dart';
+import 'package:bitirme_projesi/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../episode_info.dart';
+import '../../home_screen/episode_info.dart';
 
 class PSButton extends StatefulWidget {
   const PSButton({super.key});
@@ -34,8 +34,8 @@ class _PSButtonState extends State<PSButton> {
     return Row(
       children: [
         SizedBox(
-          width: 10,
-          height: 50,
+          width: 30,
+          height: 70,
         ),
         ElevatedButton(
           onPressed: () {
@@ -46,11 +46,11 @@ class _PSButtonState extends State<PSButton> {
             );
           },
           style: TextButton.styleFrom(
-            maximumSize: Size(500, 200),
+            maximumSize: Size(750, 300),
             foregroundColor: _button1Selected
                 ? Color.fromARGB(255, 187, 190, 0)
                 : Color.fromARGB(239, 255, 255, 255),
-            backgroundColor: Color.fromARGB(255, 0, 0, 0),
+            backgroundColor: Color.fromARGB(0, 0, 0, 0),
           ),
           child: Text('Watching'),
         ),
@@ -66,12 +66,11 @@ class _PSButtonState extends State<PSButton> {
             );
           },
           style: TextButton.styleFrom(
-            minimumSize: Size(100, 50),
-            maximumSize: Size(100, 50),
+            maximumSize: Size(750, 300),
             foregroundColor: _button2Selected
                 ? Color.fromARGB(255, 187, 190, 0)
                 : Color.fromARGB(239, 255, 255, 255),
-            backgroundColor: Color.fromARGB(255, 0, 0, 0),
+            backgroundColor: Color.fromARGB(0, 0, 0, 0),
           ),
           child: Text('Watched'),
         ),

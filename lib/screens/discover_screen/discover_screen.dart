@@ -62,7 +62,7 @@ class DiscoverScreen extends StatelessWidget {
                     ),
                     Container(
                       width: 300,
-                      margin: EdgeInsets.only(left: 5, bottom: 5),
+                      margin: EdgeInsets.only(left: 5, bottom: 8),
                       child: TextFormField(
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(

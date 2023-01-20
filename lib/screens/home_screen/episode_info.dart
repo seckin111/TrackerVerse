@@ -1,7 +1,7 @@
 import 'package:bitirme_projesi/utils/colors_utils.dart';
 import 'package:flutter/material.dart';
-import '../utils/series_info.dart';
-import '../widgets/rounded_check_box.dart';
+import '../../utils/series_info.dart';
+import '../profile_screen/widgets/rounded_check_box.dart';
 
 class EpisodeInfo extends StatelessWidget {
   final String seriesImage;
@@ -113,8 +113,11 @@ class EpisodeInfo extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const Test(
-                    seriesID: '1',
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 30),
+                    child: const Test(
+                      seriesID: '1',
+                    ),
                   ),
                 ],
               ),
@@ -150,34 +153,35 @@ class _TestState extends State<Test> {
       child: Column(
         children: [
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Flexible(
                 flex: 1,
                 child: Column(
                   children: [
                     for (int i = 1; i <= seriesList['1']!.seasons.length; i++)
-                      InkWell(
-                        onTap: () {
-                          setState(() {
-                            _selectedSeason = i;
-                            episodes.clear();
-                            episodes.addAll(seriesList['1']!.seasons[i]!);
-                          });
-                        },
-                        child: Center(
+                      Center(
+                        child: InkWell(
+                          onTap: () {
+                            setState(() {
+                              _selectedSeason = i;
+                              episodes.clear();
+                              episodes.addAll(seriesList['1']!.seasons[i]!);
+                            });
+                          },
                           child: Container(
-                            margin: const EdgeInsets.all(10),
+                            margin: const EdgeInsets.symmetric(vertical: 12),
                             decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(50),
+                              color: AppColors.white,
+                              borderRadius: BorderRadius.circular(14),
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(12.0),
                               child: Text(
                                 "Season $i",
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontSize: 20.0,
-                                  color: Colors.black,
+                                  color: AppColors.black,
                                 ),
                               ),
                             ),
@@ -190,19 +194,23 @@ class _TestState extends State<Test> {
               Flexible(
                 flex: 2,
                 child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      for (int i = 0; i < episodes.length; i++)
-                        ListTile(
-                          title: Text(
-                            episodes[i],
-                            style: const TextStyle(
-                              color: Color.fromARGB(255, 0, 82, 247),
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 40),
+                    child: Column(
+                      children: [
+                        for (int i = 0; i < episodes.length; i++)
+                          ListTile(
+                            title: Text(
+                              episodes[i],
+                              style: TextStyle(
+                                color: AppColors.white,
+                                fontSize: 20,
+                              ),
                             ),
+                            trailing: RoundCheckbox(),
                           ),
-                          trailing: RoundCheckbox(),
-                        ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),

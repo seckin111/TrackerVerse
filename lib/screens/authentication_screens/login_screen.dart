@@ -1,10 +1,10 @@
 import 'package:bitirme_projesi/entry_point.dart';
 import 'package:bitirme_projesi/widgets/login_button_reusable_widget.dart';
-import 'package:bitirme_projesi/screens/signup_screen.dart';
+import 'package:bitirme_projesi/screens/authentication_screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:bitirme_projesi/utils/colors_utils.dart';
 
-import 'home_screen.dart';
+import '../home_screen/home_screen.dart';
 
 class LogInScreen extends StatefulWidget {
   const LogInScreen({super.key});

@@ -2,8 +2,6 @@ import 'package:bitirme_projesi/utils/colors_utils.dart';
 import 'package:bitirme_projesi/utils/series_info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-import '../discover_screen/discover_screen.dart';
 import 'widgets/show_widget.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -44,7 +42,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 automaticallyImplyLeading: false,
                 floating: true,
                 pinned: true,
-                expandedHeight: 370.0,
+                expandedHeight: 389.0,
                 flexibleSpace: FlexibleSpaceBar(
                   collapseMode: CollapseMode.pin,
                   centerTitle: true,
@@ -83,8 +81,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ),
                             child: const CircleAvatar(
                               radius: 60.0,
-                              backgroundImage: NetworkImage(
-                                  "https://avatars.githubusercontent.com/u/92443831?v=4"),
+                              backgroundImage:
+                                  AssetImage("assets/avatars/jimmy.jpg"),
                             ),
                           ),
                           const SizedBox(height: 10.0),
@@ -113,17 +111,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     "Followers",
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 14.0,
+                                      fontSize: 16.0,
                                     ),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
                                   ),
                                   Text(
                                     "250",
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 14.0,
+                                      fontSize: 16.0,
                                     ),
                                   ),
-                                  SizedBox(height: 30.0),
+                                  SizedBox(height: 20.0),
                                   ElevatedButton(
                                     onPressed: () {
                                       _selectButton1();
@@ -135,14 +136,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       // );
                                     },
                                     style: TextButton.styleFrom(
-                                      maximumSize: Size(500, 200),
+                                      minimumSize: Size(150, 60),
                                       foregroundColor: _button1Selected
                                           ? Color.fromARGB(255, 187, 190, 0)
                                           : Color.fromARGB(239, 255, 255, 255),
                                       backgroundColor:
-                                          Color.fromARGB(255, 0, 0, 0),
+                                          Color.fromARGB(0, 0, 0, 0),
                                     ),
-                                    child: Text('Watching'),
+                                    child: Text(
+                                      'Watching',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -153,14 +159,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     "Following",
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 14.0,
+                                      fontSize: 16.0,
                                     ),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
                                   ),
                                   Text(
                                     "140",
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 14.0,
+                                      fontSize: 16.0,
                                     ),
                                   ),
                                   SizedBox(height: 30.0),
@@ -175,15 +184,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       // );
                                     },
                                     style: TextButton.styleFrom(
-                                      minimumSize: Size(100, 50),
-                                      maximumSize: Size(100, 50),
+                                      minimumSize: Size(150, 60),
                                       foregroundColor: _button2Selected
                                           ? Color.fromARGB(255, 187, 190, 0)
                                           : Color.fromARGB(239, 255, 255, 255),
                                       backgroundColor:
-                                          Color.fromARGB(255, 0, 0, 0),
+                                          Color.fromARGB(0, 0, 0, 0),
                                     ),
-                                    child: Text('Watched'),
+                                    child: Text(
+                                      'Watched',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),

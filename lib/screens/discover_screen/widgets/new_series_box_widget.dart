@@ -35,7 +35,7 @@ class NewSeriesBox extends StatelessWidget {
       },
       child: Container(
         width: 190,
-        height: 300,
+        height: 310,
         margin: EdgeInsets.only(left: 10),
         decoration: BoxDecoration(
           color: AppColors.primaryBlue,
