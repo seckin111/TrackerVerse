@@ -10,7 +10,7 @@ Seçkin Yılmaz (211216053)
 
 ## Sunum
 
-[Sunum](https://www.canva.com/design/DAFYZseGRYE/rTtKT-W6GQoQSVRigx60jA/view?utm_content=DAFYZseGRYE&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
+[Sunum](https://www.canva.com/design/DAFYZseGRYE/rTtKT-W6GQoQSVRigx60jA/view?utm_content=DAFYZseGRYE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=GF2pqmwVow)
 
 ## Ekran Görüntüleri 
 
