@@ -8,11 +8,11 @@ Mehmet Can Kaya (211216058)
 
 Seçkin Yılmaz (211216053)
 
-# Sunum
+## Sunum
 
 [Sunum](https://www.canva.com/design/DAFYZseGRYE/rTtKT-W6GQoQSVRigx60jA/view?utm_content=DAFYZseGRYE&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 
-# Ekran Görüntüleri 
+## Ekran Görüntüleri 
 
 Login Screen
 
