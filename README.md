@@ -22,9 +22,9 @@ SignUp Screen
 
 ![sign_up_screen](https://user-images.githubusercontent.com/92443831/213930893-7f58a7c7-a695-4faa-9a02-d4b783b895e9.png)
 
-Home Screen 
+Home Screen (In progress)
 
-(In progress)![home_screen](https://user-images.githubusercontent.com/92443831/213930897-183640f2-696e-4ee0-8e5f-84877e074165.png)
+![home_screen](https://user-images.githubusercontent.com/92443831/213930897-183640f2-696e-4ee0-8e5f-84877e074165.png)
 
 Discovery Screen
 
