@@ -17,7 +17,8 @@ class _SecondPageState extends State<SecondPage> {
       child: Hero(
         tag: widget.seriesID,
         child: EpisodeInfo(
-          seriesImage: "assets/series/breaking_bad.jpg",
+          seriesImageVertical: "assets/series/breaking_bad_vertical.jpg",
+          seriesImageHorizontal: "assets/series/breaking_bad.jpg",
           seriesTitle: "Breaking Bad",
           seriesGenre: "Crime, Drama, Thriller",
         ),

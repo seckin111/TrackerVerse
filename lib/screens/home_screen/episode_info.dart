@@ -4,13 +4,15 @@ import '../../utils/series_info.dart';
 import '../profile_screen/widgets/rounded_check_box.dart';
 
 class EpisodeInfo extends StatelessWidget {
-  final String seriesImage;
+  final String seriesImageVertical;
+  final String seriesImageHorizontal;
   final String seriesTitle;
   final String seriesGenre;
 
   const EpisodeInfo({
     super.key,
-    required this.seriesImage,
+    required this.seriesImageHorizontal,
+    required this.seriesImageVertical,
     required this.seriesTitle,
     required this.seriesGenre,
   });
@@ -25,7 +27,7 @@ class EpisodeInfo extends StatelessWidget {
             Opacity(
               opacity: 0.4,
               child: Image.asset(
-                seriesImage,
+                seriesImageHorizontal,
                 height: 280,
                 width: double.infinity,
                 fit: BoxFit.cover,
@@ -83,7 +85,7 @@ class EpisodeInfo extends StatelessWidget {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(20),
                             child: Image.asset(
-                              seriesImage,
+                              seriesImageVertical,
                               height: 250,
                               width: 180,
                               fit: BoxFit.fill,

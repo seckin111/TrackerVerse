@@ -2,7 +2,7 @@ final Map<String, Series> seriesList = {
   '1': Series(
     seriesName: 'Breaking Bad',
     seriesImageHorizontal: 'assets/series/breaking_bad.jpg',
-    seriesImageVertical: '',
+    seriesImageVertical: 'assets/series/breaking_bad_vertical.jpg',
     seriesDescription:
         'A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family\'s future.',
     seriesGenre: "Crime/Drama",
@@ -86,7 +86,7 @@ final Map<String, Series> seriesList = {
   '2': Series(
     seriesName: 'Better Call Saul',
     seriesImageHorizontal: 'assets/series/better_call_saul.png',
-    seriesImageVertical: '',
+    seriesImageVertical: 'assets/series/better_call_saul_vertical.png',
     seriesDescription:
         'New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life.',
     seriesGenre: "Crime/Drama",
@@ -100,7 +100,7 @@ final Map<String, Series> seriesList = {
   '3': Series(
     seriesName: 'Stranger Things',
     seriesImageHorizontal: 'assets/series/stranger_things.jpg',
-    seriesImageVertical: '',
+    seriesImageVertical: 'assets/series/stranger_things.jpg',
     seriesDescription:
         "When Joyce's 12-year-old son Will goes missing, she launches a terrifying investigation into his disappearance with local authorities. As they search for answers, they unravel a series of extraordinary mysteries involving secret government experiments, unnerving supernatural forces and a very unusual",
     seriesGenre: "Fantastic/Mystery",
@@ -114,7 +114,7 @@ final Map<String, Series> seriesList = {
   '4': Series(
     seriesName: 'Peaky Blinders',
     seriesImageHorizontal: 'assets/series/peaky_blinders.jpg',
-    seriesImageVertical: '',
+    seriesImageVertical: 'assets/series/peaky_blinders.jpg',
     seriesDescription:
         "A gangster family epic set in 1919 Birmingham, England; centered on a gang who sew razor blades in the peaks of their caps, and their fierce boss Tommy Shelby.",
     seriesGenre: "Crime/Drama",

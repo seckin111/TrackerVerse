@@ -32,7 +32,7 @@ class ImageWidget extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(16.0),
                 child: Image.network(
-                  seriesList[seriesID]!.seriesImageHorizontal,
+                  seriesList[seriesID]!.seriesImageVertical,
                   fit: BoxFit.cover,
                 ),
               ),

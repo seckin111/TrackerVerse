@@ -107,7 +107,7 @@ class SeriesPage extends StatelessWidget {
                               ],
                             ),
                             child: Icon(
-                              Icons.play_arrow,
+                              Icons.add,
                               color: Colors.white,
                               size: 60,
                             ),

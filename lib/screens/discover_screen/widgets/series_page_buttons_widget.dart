@@ -24,7 +24,7 @@ class MoviePageButtons extends StatelessWidget {
               ],
             ),
             child: Icon(
-              Icons.add,
+              Icons.play_arrow,
               color: Colors.white,
               size: 35,
             ),
@@ -43,7 +43,7 @@ class MoviePageButtons extends StatelessWidget {
               ],
             ),
             child: Icon(
-              Icons.download,
+              Icons.add_alert_sharp,
               color: Colors.white,
               size: 35,
             ),
