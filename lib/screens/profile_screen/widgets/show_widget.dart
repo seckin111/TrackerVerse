@@ -1,11 +1,11 @@
-import 'package:bitirme_projesi/screens/profile_screen/widgets/second_page_test.dart';
 import 'package:flutter/material.dart';
 
-import '../../../utils/series_info.dart';
+import 'package:bitirme_projesi/screens/profile_screen/widgets/my_hero_widget.dart';
+import 'package:bitirme_projesi/utils/series_info.dart';
 
 class ImageWidget extends StatelessWidget {
   final String seriesID;
-  const ImageWidget({required this.seriesID});
+  const ImageWidget({super.key, required this.seriesID});
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +17,13 @@ class ImageWidget extends StatelessWidget {
       child: InkWell(
         onTap: (() {
           Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (BuildContext context) => SecondPage(
-                  seriesID: seriesID,
-                ),
-              ));
+            context,
+            MaterialPageRoute(
+              builder: (BuildContext context) => MyHeroWidget(
+                seriesID: seriesID,
+              ),
+            ),
+          );
         }),
         child: Hero(
           tag: seriesID,
@@ -44,8 +45,8 @@ class ImageWidget extends StatelessWidget {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
-                        Color.fromARGB(151, 0, 0, 0),
-                        Color.fromARGB(255, 0, 0, 0).withOpacity(0.9),
+                        const Color.fromARGB(151, 0, 0, 0),
+                        const Color.fromARGB(255, 0, 0, 0).withOpacity(0.9),
                       ],
                     ),
                   ),
@@ -58,11 +59,8 @@ class ImageWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(
-                      seriesList[seriesID]!
-                              .serisCompletionPercentetion
-                              .toString() +
-                          '%',
-                      style: TextStyle(
+                      '${seriesList[seriesID]!.serisCompletionPercentetion}%',
+                      style: const TextStyle(
                         color: Colors.white70,
                         fontSize: 54.0,
                         fontWeight: FontWeight.bold,
@@ -70,7 +68,7 @@ class ImageWidget extends StatelessWidget {
                     ),
                     Text(
                       seriesList[seriesID]!.seriesName,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 20.0,
                       ),
@@ -78,7 +76,6 @@ class ImageWidget extends StatelessWidget {
                   ],
                 ),
               )
-              // ...
             ],
           ),
         ),

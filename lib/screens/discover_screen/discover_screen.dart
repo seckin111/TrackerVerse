@@ -1,8 +1,8 @@
-import 'package:bitirme_projesi/utils/colors_utils.dart';
 import 'package:flutter/material.dart';
 
-import 'widgets/new_series_field.dart';
-import 'widgets/upcoming_field.dart';
+import 'package:bitirme_projesi/screens/discover_screen/widgets/new_series_field.dart';
+import 'package:bitirme_projesi/screens/discover_screen/widgets/upcoming_field.dart';
+import 'package:bitirme_projesi/utils/colors_utils.dart';
 
 class DiscoverScreen extends StatelessWidget {
   const DiscoverScreen({super.key});
@@ -16,7 +16,7 @@ class DiscoverScreen extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   vertical: 18,
                   horizontal: 10,
                 ),
@@ -24,7 +24,7 @@ class DiscoverScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
-                      children: [
+                      children: const [
                         Text(
                           "Discover",
                           style: TextStyle(
@@ -46,8 +46,8 @@ class DiscoverScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.all(10),
+                margin: const EdgeInsets.symmetric(horizontal: 10),
                 height: 60,
                 decoration: BoxDecoration(
                   color: AppColors.primaryBlue,
@@ -55,17 +55,17 @@ class DiscoverScreen extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.search,
                       color: Colors.white54,
                       size: 30,
                     ),
                     Container(
                       width: 300,
-                      margin: EdgeInsets.only(left: 5, bottom: 8),
+                      margin: const EdgeInsets.only(left: 5, bottom: 8),
                       child: TextFormField(
-                        style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
+                        style: const TextStyle(color: Colors.white),
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
                           hintText: "Search",
                           hintStyle: TextStyle(
@@ -77,11 +77,11 @@ class DiscoverScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 30),
-              UpcomingWidget(),
-              SizedBox(height: 40),
-              NewSeriesWidget(),
-              SizedBox(height: 10),
+              const SizedBox(height: 30),
+              const UpcomingWidget(),
+              const SizedBox(height: 40),
+              const NewSeriesWidget(),
+              const SizedBox(height: 10),
             ],
           ),
         ),

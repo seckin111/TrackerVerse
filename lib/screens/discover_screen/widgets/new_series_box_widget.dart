@@ -1,22 +1,12 @@
-import 'package:bitirme_projesi/utils/colors_utils.dart';
+import 'package:bitirme_projesi/utils/series_info.dart';
 import 'package:flutter/material.dart';
 
-import 'series_page_widget.dart';
+import 'package:bitirme_projesi/screens/discover_screen/widgets/series_page_widget.dart';
+import 'package:bitirme_projesi/utils/colors_utils.dart';
 
 class NewSeriesBox extends StatelessWidget {
-  final String seriesTitle;
-  final String seriesRating;
-  final String seriesImage;
-  final String seriesDescription;
-  final String seriesGenre;
-
-  const NewSeriesBox(
-      {super.key,
-      required this.seriesTitle,
-      required this.seriesRating,
-      required this.seriesImage,
-      required this.seriesDescription,
-      required this.seriesGenre});
+  final String seriesID;
+  const NewSeriesBox({Key? key, required this.seriesID}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +15,8 @@ class NewSeriesBox extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => SeriesPage(
-              seriesImage: seriesImage,
-              seriesTitle: seriesTitle,
-              seriesDescription: seriesDescription,
+            builder: (BuildContext context) => SeriesPage(
+              seriesID: seriesID,
             ),
           ),
         );
@@ -36,7 +24,7 @@ class NewSeriesBox extends StatelessWidget {
       child: Container(
         width: 190,
         height: 310,
-        margin: EdgeInsets.only(left: 10),
+        margin: const EdgeInsets.only(left: 10),
         decoration: BoxDecoration(
           color: AppColors.primaryBlue,
           borderRadius: BorderRadius.circular(10),
@@ -52,19 +40,19 @@ class NewSeriesBox extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ClipRRect(
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(10),
                 topRight: Radius.circular(10),
               ),
               child: Image.asset(
-                seriesImage,
+                seriesList[seriesID]!.seriesImageVertical,
                 height: 200,
                 width: 200,
                 fit: BoxFit.cover,
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                 vertical: 10,
                 horizontal: 5,
               ),
@@ -72,33 +60,33 @@ class NewSeriesBox extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    seriesTitle,
-                    style: TextStyle(
+                    seriesList[seriesID]!.seriesName,
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   Text(
-                    seriesGenre,
-                    style: TextStyle(
+                    seriesList[seriesID]!.seriesGenre,
+                    style: const TextStyle(
                       color: Colors.white54,
                     ),
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Row(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.star,
                         color: Colors.amber,
                       ),
-                      SizedBox(width: 5),
+                      const SizedBox(width: 5),
                       Text(
-                        seriesRating,
-                        style: TextStyle(
+                        seriesList[seriesID]!.seriesRating,
+                        style: const TextStyle(
                           color: Colors.white54,
                           fontSize: 16,
                         ),

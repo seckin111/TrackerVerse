@@ -1,8 +1,8 @@
-import 'package:bitirme_projesi/widgets/login_button_reusable_widget.dart';
-import 'package:bitirme_projesi/utils/colors_utils.dart';
 import 'package:flutter/material.dart';
 
-import 'login_screen.dart';
+import 'package:bitirme_projesi/screens/authentication_screens/login_screen.dart';
+import 'package:bitirme_projesi/widgets/login_button_reusable_widget.dart';
+import 'package:bitirme_projesi/utils/colors_utils.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -65,7 +65,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => LogInScreen(),
+                      builder: (context) => const LogInScreen(),
                     ),
                   );
                 })

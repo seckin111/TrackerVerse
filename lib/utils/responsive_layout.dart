@@ -1,7 +1,7 @@
-import 'package:bitirme_projesi/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 
-import '../entry_point.dart';
+import 'package:bitirme_projesi/utils/dimensions.dart';
+import 'package:bitirme_projesi/entry_point.dart';
 
 class ResponsiveLayout extends StatelessWidget {
   final Widget mobileScreen;
@@ -23,7 +23,7 @@ class ResponsiveLayout extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth < mobileScreenSize) {
-          return EntryPoint();
+          return const EntryPoint();
         } else if (constraints.maxWidth < tabletScreenSize) {
           return tabletScreen;
         } else if (constraints.maxWidth < desktopScreenSize) {

@@ -1,31 +1,25 @@
-import 'package:bitirme_projesi/utils/colors_utils.dart';
 import 'package:flutter/material.dart';
 
-import 'recommend_field.dart';
-import 'series_page_buttons_widget.dart';
+import 'package:bitirme_projesi/screens/discover_screen/widgets/series_page_buttons_widget.dart';
+import 'package:bitirme_projesi/screens/discover_screen/widgets/recommend_field.dart';
+import 'package:bitirme_projesi/utils/colors_utils.dart';
+import 'package:bitirme_projesi/utils/series_info.dart';
 
 class SeriesPage extends StatelessWidget {
-  final String seriesImage;
-  final String seriesTitle;
-  final String seriesDescription;
-
-  const SeriesPage(
-      {super.key,
-      required this.seriesImage,
-      required this.seriesTitle,
-      required this.seriesDescription});
+  final String seriesID;
+  const SeriesPage({Key? key, required this.seriesID}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.primaryBlue,
-      body: SafeArea(
-        child: Stack(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: AppColors.primaryBlue,
+        body: Stack(
           children: [
             Opacity(
               opacity: 0.4,
               child: Image.asset(
-                seriesImage,
+                seriesList[seriesID]!.seriesImageHorizontal,
                 height: 280,
                 width: double.infinity,
                 fit: BoxFit.cover,
@@ -36,7 +30,7 @@ class SeriesPage extends StatelessWidget {
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         vertical: 10,
                         horizontal: 25,
                       ),
@@ -47,7 +41,7 @@ class SeriesPage extends StatelessWidget {
                             onTap: () {
                               Navigator.pop(context);
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.arrow_back,
                               color: Colors.white70,
                               size: 30,
@@ -55,7 +49,7 @@ class SeriesPage extends StatelessWidget {
                           ),
                           InkWell(
                             onTap: () {},
-                            child: Icon(
+                            child: const Icon(
                               Icons.favorite_border,
                               color: Colors.white70,
                               size: 35,
@@ -64,9 +58,9 @@ class SeriesPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(height: 60),
+                    const SizedBox(height: 60),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -84,7 +78,7 @@ class SeriesPage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(20),
                               child: Image.asset(
-                                seriesImage,
+                                seriesList[seriesID]!.seriesImageVertical,
                                 height: 250,
                                 width: 180,
                                 fit: BoxFit.cover,
@@ -92,7 +86,7 @@ class SeriesPage extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            margin: EdgeInsets.only(right: 40, top: 30),
+                            margin: const EdgeInsets.only(right: 40, top: 30),
                             height: 80,
                             width: 80,
                             decoration: BoxDecoration(
@@ -106,7 +100,7 @@ class SeriesPage extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            child: Icon(
+                            child: const Icon(
                               Icons.add,
                               color: Colors.white,
                               size: 60,
@@ -115,10 +109,10 @@ class SeriesPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(height: 30),
-                    MoviePageButtons(),
+                    const SizedBox(height: 30),
+                    const SeriesPageButtons(),
                     Padding(
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         vertical: 20,
                         horizontal: 10,
                       ),
@@ -126,17 +120,17 @@ class SeriesPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            seriesTitle,
-                            style: TextStyle(
+                            seriesList[seriesID]!.seriesName,
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 30,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                           Text(
-                            seriesDescription,
-                            style: TextStyle(
+                            seriesList[seriesID]!.seriesDescription,
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 16,
                             ),
@@ -145,8 +139,8 @@ class SeriesPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(height: 10),
-                    RecommendWidget(),
+                    const SizedBox(height: 10),
+                    const RecommendWidget(),
                   ],
                 ),
               ),

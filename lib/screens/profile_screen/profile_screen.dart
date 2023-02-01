@@ -1,8 +1,9 @@
-import 'package:bitirme_projesi/utils/colors_utils.dart';
-import 'package:bitirme_projesi/utils/series_info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'widgets/show_widget.dart';
+
+import 'package:bitirme_projesi/screens/profile_screen/widgets/show_widget.dart';
+import 'package:bitirme_projesi/utils/colors_utils.dart';
+import 'package:bitirme_projesi/utils/series_info.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -42,7 +43,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 automaticallyImplyLeading: false,
                 floating: true,
                 pinned: true,
-                expandedHeight: 389.0,
+                expandedHeight: 390.0,
                 flexibleSpace: FlexibleSpaceBar(
                   collapseMode: CollapseMode.pin,
                   centerTitle: true,
@@ -101,30 +102,30 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               fontSize: 16.0,
                             ),
                           ),
-                          const SizedBox(height: 10.0),
+                          const SizedBox(height: 5.0),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Column(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "Followers",
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 16.0,
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 5,
                                   ),
-                                  Text(
+                                  const Text(
                                     "250",
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 16.0,
                                     ),
                                   ),
-                                  SizedBox(height: 20.0),
+                                  const SizedBox(height: 17.0),
                                   ElevatedButton(
                                     onPressed: () {
                                       _selectButton1();
@@ -136,14 +137,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       // );
                                     },
                                     style: TextButton.styleFrom(
-                                      minimumSize: Size(150, 60),
+                                      minimumSize: const Size(150, 60),
                                       foregroundColor: _button1Selected
-                                          ? Color.fromARGB(255, 187, 190, 0)
-                                          : Color.fromARGB(239, 255, 255, 255),
+                                          ? const Color.fromARGB(
+                                              255, 187, 190, 0)
+                                          : const Color.fromARGB(
+                                              239, 255, 255, 255),
                                       backgroundColor:
-                                          Color.fromARGB(0, 0, 0, 0),
+                                          const Color.fromARGB(0, 0, 0, 0),
                                     ),
-                                    child: Text(
+                                    child: const Text(
                                       'Watching',
                                       style: TextStyle(
                                         fontSize: 20,
@@ -155,24 +158,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               const SizedBox(width: 5.0),
                               Column(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "Following",
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 16.0,
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 5,
                                   ),
-                                  Text(
+                                  const Text(
                                     "140",
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 16.0,
                                     ),
                                   ),
-                                  SizedBox(height: 30.0),
+                                  const SizedBox(height: 17.0),
                                   ElevatedButton(
                                     onPressed: () {
                                       _selectButton2();
@@ -184,14 +187,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       // );
                                     },
                                     style: TextButton.styleFrom(
-                                      minimumSize: Size(150, 60),
+                                      minimumSize: const Size(150, 60),
                                       foregroundColor: _button2Selected
-                                          ? Color.fromARGB(255, 187, 190, 0)
-                                          : Color.fromARGB(239, 255, 255, 255),
+                                          ? const Color.fromARGB(
+                                              255, 187, 190, 0)
+                                          : const Color.fromARGB(
+                                              239, 255, 255, 255),
                                       backgroundColor:
-                                          Color.fromARGB(0, 0, 0, 0),
+                                          const Color.fromARGB(0, 0, 0, 0),
                                     ),
-                                    child: Text(
+                                    child: const Text(
                                       'Watched',
                                       style: TextStyle(
                                         fontSize: 20,

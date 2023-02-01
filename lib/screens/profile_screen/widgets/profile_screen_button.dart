@@ -1,13 +1,12 @@
-import 'package:bitirme_projesi/screens/discover_screen/discover_screen.dart';
-import 'package:bitirme_projesi/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../home_screen/episode_info.dart';
+import 'package:bitirme_projesi/screens/discover_screen/discover_screen.dart';
 
 class PSButton extends StatefulWidget {
   const PSButton({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _PSButtonState createState() => _PSButtonState();
 }
 
@@ -33,7 +32,7 @@ class _PSButtonState extends State<PSButton> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SizedBox(
+        const SizedBox(
           width: 30,
           height: 70,
         ),
@@ -42,19 +41,19 @@ class _PSButtonState extends State<PSButton> {
             _selectButton1();
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => DiscoverScreen()),
+              MaterialPageRoute(builder: (context) => const DiscoverScreen()),
             );
           },
           style: TextButton.styleFrom(
-            maximumSize: Size(750, 300),
+            maximumSize: const Size(750, 300),
             foregroundColor: _button1Selected
-                ? Color.fromARGB(255, 187, 190, 0)
-                : Color.fromARGB(239, 255, 255, 255),
-            backgroundColor: Color.fromARGB(0, 0, 0, 0),
+                ? const Color.fromARGB(255, 187, 190, 0)
+                : const Color.fromARGB(239, 255, 255, 255),
+            backgroundColor: const Color.fromARGB(0, 0, 0, 0),
           ),
-          child: Text('Watching'),
+          child: const Text('Watching'),
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         ElevatedButton(
@@ -62,17 +61,17 @@ class _PSButtonState extends State<PSButton> {
             _selectButton2();
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => DiscoverScreen()),
+              MaterialPageRoute(builder: (context) => const DiscoverScreen()),
             );
           },
           style: TextButton.styleFrom(
-            maximumSize: Size(750, 300),
+            maximumSize: const Size(750, 300),
             foregroundColor: _button2Selected
-                ? Color.fromARGB(255, 187, 190, 0)
-                : Color.fromARGB(239, 255, 255, 255),
-            backgroundColor: Color.fromARGB(0, 0, 0, 0),
+                ? const Color.fromARGB(255, 187, 190, 0)
+                : const Color.fromARGB(239, 255, 255, 255),
+            backgroundColor: const Color.fromARGB(0, 0, 0, 0),
           ),
-          child: Text('Watched'),
+          child: const Text('Watched'),
         ),
       ],
     );

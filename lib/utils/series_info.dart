@@ -1,7 +1,7 @@
 final Map<String, Series> seriesList = {
   '1': Series(
     seriesName: 'Breaking Bad',
-    seriesImageHorizontal: 'assets/series/breaking_bad.jpg',
+    seriesImageHorizontal: 'assets/series/breaking_bad_horizontal.jpg',
     seriesImageVertical: 'assets/series/breaking_bad_vertical.jpg',
     seriesDescription:
         'A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family\'s future.',
@@ -85,7 +85,7 @@ final Map<String, Series> seriesList = {
   ),
   '2': Series(
     seriesName: 'Better Call Saul',
-    seriesImageHorizontal: 'assets/series/better_call_saul.png',
+    seriesImageHorizontal: 'assets/series/better_call_saul_horizontal.png',
     seriesImageVertical: 'assets/series/better_call_saul_vertical.png',
     seriesDescription:
         'New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life.',
@@ -99,8 +99,8 @@ final Map<String, Series> seriesList = {
   ),
   '3': Series(
     seriesName: 'Stranger Things',
-    seriesImageHorizontal: 'assets/series/stranger_things.jpg',
-    seriesImageVertical: 'assets/series/stranger_things.jpg',
+    seriesImageHorizontal: 'assets/series/stranger_things_horizontal.jpg',
+    seriesImageVertical: 'assets/series/stranger_things_vertical.jpg',
     seriesDescription:
         "When Joyce's 12-year-old son Will goes missing, she launches a terrifying investigation into his disappearance with local authorities. As they search for answers, they unravel a series of extraordinary mysteries involving secret government experiments, unnerving supernatural forces and a very unusual",
     seriesGenre: "Fantastic/Mystery",
@@ -113,8 +113,8 @@ final Map<String, Series> seriesList = {
   ),
   '4': Series(
     seriesName: 'Peaky Blinders',
-    seriesImageHorizontal: 'assets/series/peaky_blinders.jpg',
-    seriesImageVertical: 'assets/series/peaky_blinders.jpg',
+    seriesImageHorizontal: 'assets/series/peaky_blinders_horizontal.jpg',
+    seriesImageVertical: 'assets/series/peaky_blinders_vertical.jpg',
     seriesDescription:
         "A gangster family epic set in 1919 Birmingham, England; centered on a gang who sew razor blades in the peaks of their caps, and their fierce boss Tommy Shelby.",
     seriesGenre: "Crime/Drama",
@@ -127,8 +127,8 @@ final Map<String, Series> seriesList = {
   ),
   '5': Series(
     seriesName: 'The Walking Dead',
-    seriesImageHorizontal: 'assets/series/the_walking_dead.jpg',
-    seriesImageVertical: '',
+    seriesImageHorizontal: 'assets/series/the_walking_dead_horizontal.jpg',
+    seriesImageVertical: 'assets/series/the_walking_dead_vertical.jpg',
     seriesDescription:
         "Sheriff Deputy Rick Grimes wakes up from a coma to learn the world is in ruins, and must lead a group of survivors to stay alive.",
     seriesGenre: "Horror/Drama",
@@ -141,8 +141,8 @@ final Map<String, Series> seriesList = {
   ),
   '6': Series(
     seriesName: 'The Witcher',
-    seriesImageHorizontal: 'assets/series/the_witcher.jpg',
-    seriesImageVertical: '',
+    seriesImageHorizontal: 'assets/series/the_witcher_horizontal.jpg',
+    seriesImageVertical: 'assets/series/the_witcher_vertical.jpg',
     seriesDescription:
         "Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts.",
     seriesGenre: "Fantasy/Action",
@@ -155,8 +155,8 @@ final Map<String, Series> seriesList = {
   ),
   '7': Series(
     seriesName: 'The Mandalorian',
-    seriesImageHorizontal: 'assets/series/the_mandalorian.jpg',
-    seriesImageVertical: '',
+    seriesImageHorizontal: 'assets/series/the_mandalorian_horizontal.jpg',
+    seriesImageVertical: 'assets/series/the_mandalorian_vertical.jpg',
     seriesDescription:
         "The travels of a lone bounty hunter in the outer reaches of the galaxy, far from the authority of the New Republic.",
     seriesGenre: "Fantasy/Action",
@@ -169,8 +169,8 @@ final Map<String, Series> seriesList = {
   ),
   '8': Series(
     seriesName: 'Dark',
-    seriesImageHorizontal: 'assets/series/dark.jpg',
-    seriesImageVertical: '',
+    seriesImageHorizontal: 'assets/series/dark_horizontal.png',
+    seriesImageVertical: 'assets/series/dark_vertical.jpg',
     seriesDescription:
         "A family saga with a supernatural twist, set in a German town, where the disappearance of two young children exposes the relationships among four families.",
     seriesGenre: "Fantastic/Mystery",
@@ -183,8 +183,8 @@ final Map<String, Series> seriesList = {
   ),
   '9': Series(
     seriesName: 'The Last Kingdom',
-    seriesImageHorizontal: 'assets/series/the_last_kingdom.jpg',
-    seriesImageVertical: '',
+    seriesImageHorizontal: 'assets/series/the_last_kingdom_horizontal.jpg',
+    seriesImageVertical: 'assets/series/the_last_kingdom_vertical.jpg',
     seriesDescription:
         "A show of heroic deeds and epic battles with a thematic depth that embraces politics, religion, warfare, courage, love, loyalty and our universal search for identity.",
     seriesGenre: "Fantastic/Mystery",
@@ -197,8 +197,8 @@ final Map<String, Series> seriesList = {
   ),
   '10': Series(
     seriesName: 'Merlin',
-    seriesImageHorizontal: 'assets/series/merlin.jpg',
-    seriesImageVertical: '',
+    seriesImageHorizontal: 'assets/series/merlin_horizontal.jpg',
+    seriesImageVertical: 'assets/series/merlin_vertical.jpg',
     seriesDescription:
         "Merlin is a British fantasy-adventure television programme.",
     seriesGenre: "Fantastic/Mystery",
@@ -211,8 +211,8 @@ final Map<String, Series> seriesList = {
   ),
   '11': Series(
     seriesName: 'Game of Thrones',
-    seriesImageHorizontal: 'assets/series/game_of_thrones.jpg',
-    seriesImageVertical: '',
+    seriesImageHorizontal: 'assets/series/game_of_thrones_horizontal.png',
+    seriesImageVertical: 'assets/series/game_of_thrones_vertical.jpg',
     seriesDescription:
         "Nine noble families fight for control over the mythical lands of Westeros, while an ancient enemy returns after being dormant for millennia.",
     seriesGenre: "Fantastic/Mystery",
@@ -225,8 +225,8 @@ final Map<String, Series> seriesList = {
   ),
   '12': Series(
     seriesName: 'The Last Of Us',
-    seriesImageHorizontal: 'assets/series/the_last_of_us.jpg',
-    seriesImageVertical: '',
+    seriesImageHorizontal: 'assets/series/the_last_of_us_horizontal.jpg',
+    seriesImageVertical: 'assets/series/the_last_of_us_vertical.jpg',
     seriesDescription:
         "The Last of Us is an American post-apocalyptic action-adventure survival horror video game developed by Naughty Dog and published by Sony Interactive Entertainment.",
     seriesGenre: "Fantastic/Mystery",
@@ -239,8 +239,8 @@ final Map<String, Series> seriesList = {
   ),
   '13': Series(
     seriesName: 'Vikings',
-    seriesImageHorizontal: 'assets/series/vikings.jpg',
-    seriesImageVertical: '',
+    seriesImageHorizontal: 'assets/series/vikings_horizontal.jpg',
+    seriesImageVertical: 'assets/series/vikings_vertical.jpg',
     seriesDescription:
         "The Vikings is a historical drama television series written and created by Michael Hirst for the History channel.",
     seriesGenre: "Fantastic/Mystery",
@@ -252,8 +252,8 @@ final Map<String, Series> seriesList = {
   ),
   '14': Series(
     seriesName: 'Wednesday',
-    seriesImageHorizontal: 'assets/series/wednesday.jpg',
-    seriesImageVertical: '',
+    seriesImageHorizontal: 'assets/series/wednesday_horizontal.jpg',
+    seriesImageVertical: 'assets/series/wednesday_vertical.jpg',
     seriesDescription:
         "Wednesday is a 1998 American fantasy film directed by Tim Burton and starring Johnny Depp, Christina Ricci, and Miranda Richardson.",
     seriesGenre: "Fantastic/Mystery",
@@ -263,7 +263,7 @@ final Map<String, Series> seriesList = {
       1: ['Episode 1', 'Episode 2', 'Episode 3'],
       2: ['Episode 4', 'Episode 5', 'Episode 6']
     },
-  ), // diğer diziler
+  ), // diğer diziler...
 };
 
 class Series {
