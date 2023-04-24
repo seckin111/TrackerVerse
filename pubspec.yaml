@@ -33,10 +33,13 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^1.1.6
+  isar: ^3.1.0
   rive: ^0.9.0
 
 dev_dependencies:
+  build_runner: ^2.3.3
   flutter_lints: ^2.0.0
+  isar_generator: ^3.0.5
   flutter_test:
     sdk: flutter
 
@@ -59,7 +62,6 @@ flutter:
     - assets/series/upcoming/
     - assets/series/recommend/
     - assets/avatars/
-
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
