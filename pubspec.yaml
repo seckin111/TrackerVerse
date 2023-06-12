@@ -68,7 +68,6 @@ flutter:
     - assets/logo/
     - assets/backgrounds/
     - assets/series/
-    - assets/series/upcoming/
     - assets/series/recommend/
     - assets/avatars/
   #   - images/a_dot_ham.jpeg

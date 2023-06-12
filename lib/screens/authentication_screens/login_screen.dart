@@ -23,6 +23,23 @@ class _LogInScreenState extends State<LogInScreen> {
     String email = _emailTextController.text;
     String password = _passwordTextController.text;
 
+    if (email == '' || password == '' || email == ' ' || password == ' ') {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Error'),
+          content: const Text('Please fill all the fields.'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('OK'),
+            ),
+          ],
+        ),
+      );
+      return;
+    }
+
     var boxUser = await Hive.openBox<User>('userBox');
     User? user = boxUser.values.firstWhereOrNull(
       (user) => user.email == email && user.password == password,

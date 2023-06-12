@@ -23,6 +23,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
     String password = _passwordTextController.text;
     String userName = _userNameTextController.text;
 
+    if (email == '' || password == '' || userName == '') {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Error'),
+          content: const Text('Please fill all the fields.'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('OK'),
+            ),
+          ],
+        ),
+      );
+      return;
+    }
+
     var boxUser = await Hive.openBox<User>('userBox');
     User? existingUser = boxUser.values.firstWhereOrNull(
       (user) => user.email == email,
@@ -102,7 +119,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                reusableTextField("Enter Email id ", Icons.person_outline, true,
+                reusableTextField("Enter Email ", Icons.person_outline, true,
                     _emailTextController),
                 const SizedBox(
                   height: 20,
