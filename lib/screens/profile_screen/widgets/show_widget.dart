@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:bitirme_projesi/screens/profile_screen/widgets/my_hero_widget.dart';
-import 'package:bitirme_projesi/utils/series_info.dart';
+import '../../../utils/series_info.dart';
+import 'my_hero_widget.dart';
+
+
 
 class ImageWidget extends StatelessWidget {
   final String seriesID;

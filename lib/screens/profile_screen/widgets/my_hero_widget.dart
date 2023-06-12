@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:bitirme_projesi/screens/profile_screen/episode_info_screen.dart';
+import '../episode_info_screen.dart';
 
 class MyHeroWidget extends StatefulWidget {
   final String seriesID;
