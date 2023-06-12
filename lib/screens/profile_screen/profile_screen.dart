@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'package:bitirme_projesi/screens/profile_screen/widgets/show_widget.dart';
-import 'package:bitirme_projesi/utils/colors_utils.dart';
-import 'package:bitirme_projesi/utils/series_info.dart';
+import '../../utils/colors_utils.dart';
+import '../../utils/series_info.dart';
+import 'widgets/show_widget.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});

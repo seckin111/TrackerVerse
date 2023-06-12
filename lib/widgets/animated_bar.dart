@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:bitirme_projesi/utils/colors_utils.dart';
+import '../utils/colors_utils.dart';
 
 class AnimatedBar extends StatelessWidget {
   const AnimatedBar({

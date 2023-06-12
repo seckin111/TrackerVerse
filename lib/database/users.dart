@@ -1,17 +1,18 @@
-import 'package:isar/isar.dart';
+import 'package:hive/hive.dart';
 
 part 'users.g.dart';
 
-@collection
-class User {
-  Id id = Isar.autoIncrement; // auto increment id.
-  String name; // name of the user.
-  String email; // email of the user.
-  String password; // password of the user.
+@HiveType(typeId: 0)
+class User extends HiveObject {
+  @HiveField(0)
+  int? id;
 
-  User({
-    required this.name,
-    required this.email,
-    required this.password,
-  });
+  @HiveField(1)
+  String? userName;
+
+  @HiveField(2)
+  String? email;
+
+  @HiveField(3)
+  String? password;
 }

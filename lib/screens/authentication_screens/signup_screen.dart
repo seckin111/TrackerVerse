@@ -1,8 +1,10 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-import 'package:bitirme_projesi/screens/authentication_screens/login_screen.dart';
-import 'package:bitirme_projesi/widgets/login_button_reusable_widget.dart';
-import 'package:bitirme_projesi/utils/colors_utils.dart';
+import '../../database/users.dart';
+import '../../utils/colors_utils.dart';
+import '../../widgets/login_button_reusable_widget.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -15,6 +17,55 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController _emailTextController = TextEditingController();
   final TextEditingController _passwordTextController = TextEditingController();
   final TextEditingController _userNameTextController = TextEditingController();
+
+  Future<void> register(BuildContext context) async {
+    String email = _emailTextController.text;
+    String password = _passwordTextController.text;
+    String userName = _userNameTextController.text;
+
+    var boxUser = await Hive.openBox<User>('userBox');
+    User? existingUser = boxUser.values.firstWhereOrNull(
+      (user) => user.email == email,
+    );
+
+    if (existingUser != null) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Error'),
+          content: const Text('Email already exists.'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('OK'),
+            ),
+          ],
+        ),
+      );
+    } else {
+      User newUser = User()
+        ..id = boxUser.values.length + 1
+        ..userName = userName
+        ..email = email
+        ..password = password;
+
+      boxUser.add(newUser);
+
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Success'),
+          content: const Text('Registration successful.'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('OK'),
+            ),
+          ],
+        ),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -62,13 +113,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   height: 20,
                 ),
                 logInSignUpButton(context, false, () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const LogInScreen(),
-                    ),
-                  );
+                  register(context);
                 })
+
+                // logInSignUpButton(context, false, () {
+                //   Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //       builder: (context) => const LogInScreen(),
+                //     ),
+                //   );
+                // })
               ],
             ),
           ),

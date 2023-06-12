@@ -69,7 +69,7 @@ const SeriesSchema = CollectionSchema(
   getId: _seriesGetId,
   getLinks: _seriesGetLinks,
   attach: _seriesAttach,
-  version: '3.1.0',
+  version: '3.1.0+1',
 );
 
 int _seriesEstimateSize(
@@ -1891,7 +1891,7 @@ const SeriesSeasonsSchema = CollectionSchema(
   getId: _seriesSeasonsGetId,
   getLinks: _seriesSeasonsGetLinks,
   attach: _seriesSeasonsAttach,
-  version: '3.1.0',
+  version: '3.1.0+1',
 );
 
 int _seriesSeasonsEstimateSize(

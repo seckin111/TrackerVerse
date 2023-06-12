@@ -1,11 +1,42 @@
 import 'package:flutter/material.dart';
 
-import 'package:bitirme_projesi/screens/discover_screen/widgets/new_series_field.dart';
-import 'package:bitirme_projesi/screens/discover_screen/widgets/upcoming_field.dart';
-import 'package:bitirme_projesi/utils/colors_utils.dart';
+import '../../../api/series_api.dart';
+import '../../../utils/colors_utils.dart';
+import 'widgets/series_box_widget.dart';
+import 'widgets/upcoming_widget.dart';
 
-class DiscoverScreen extends StatelessWidget {
+class DiscoverScreen extends StatefulWidget {
   const DiscoverScreen({super.key});
+
+  @override
+  State<DiscoverScreen> createState() => _DiscoverScreenState();
+}
+
+class _DiscoverScreenState extends State<DiscoverScreen> {
+  List<dynamic> popularTvShows = [];
+
+  List<dynamic> upcomingTvShows = [];
+
+  @override
+  void initState() {
+    super.initState();
+    loadPopularTVShows();
+    loadUpcomingNews();
+  }
+
+  Future<void> loadPopularTVShows() async {
+    final response = await TvShowsApi().getPopularTVShows();
+    setState(() {
+      popularTvShows = response;
+    });
+  }
+
+  Future<void> loadUpcomingNews() async {
+    final response = await TvShowsApi().getUpcomingTVShows();
+    setState(() {
+      upcomingTvShows = response;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,19 +48,19 @@ class DiscoverScreen extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(
-                  vertical: 18,
-                  horizontal: 10,
+                  vertical: 20,
+                  horizontal: 15,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
-                      children: const [
+                    const Column(
+                      children: [
                         Text(
                           "Discover",
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 26,
+                            fontSize: 30,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
@@ -77,11 +108,94 @@ class DiscoverScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 30),
-              const UpcomingWidget(),
-              const SizedBox(height: 40),
-              const NewSeriesWidget(),
-              const SizedBox(height: 10),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(10, 20, 10, 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Upcoming TV Shows",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    // MaterialButton(
+                    //   enableFeedback: true,
+                    //   onPressed: null,
+                    //   mouseCursor: SystemMouseCursors.click,
+                    //   child: Text(
+                    //     "See All",
+                    //     style: TextStyle(
+                    //       color: Colors.white54,
+                    //       fontSize: 16,
+                    //     ),
+                    //   ),
+                    // ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 180,
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: upcomingTvShows.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    final upTvShows = upcomingTvShows[index];
+                    return UpcomingWidget(
+                      imgUrl:
+                          'https://image.tmdb.org/t/p/w200${upTvShows['backdrop_path']}',
+                    );
+                  },
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(10, 20, 10, 10),
+                // padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Popular TV Shows",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    MaterialButton(
+                      enableFeedback: true,
+                      onPressed: null,
+                      mouseCursor: SystemMouseCursors.click,
+                      child: Text(
+                        "See All",
+                        style: TextStyle(
+                          color: Colors.white54,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 310,
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: popularTvShows.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    final tvShow = popularTvShows[index];
+                    return NewSeriesBox(
+                      tvShowId: tvShow['id'],
+                      tvShowName: tvShow['name'],
+                      tvShowImage:
+                          'https://image.tmdb.org/t/p/w200${tvShow['poster_path']}',
+                      tvShowRating: tvShow['vote_average'].toString(),
+                    );
+                  },
+                ),
+              ),
             ],
           ),
         ),

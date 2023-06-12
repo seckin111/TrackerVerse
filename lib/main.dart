@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-import 'package:bitirme_projesi/screens/authentication_screens/login_screen.dart';
+import 'database/users.dart';
+import 'screens/authentication_screens/login_screen.dart';
 
-void main() {
+late Box boxUser;
+Future<void> main() async {
+  await Hive.initFlutter();
+  Hive.registerAdapter(UserAdapter());
+  boxUser = await Hive.openBox<User>('userBox');
   runApp(
     const MaterialApp(
       title: 'TrackerVerse',

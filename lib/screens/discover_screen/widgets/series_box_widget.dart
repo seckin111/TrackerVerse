@@ -1,12 +1,20 @@
-import 'package:bitirme_projesi/utils/series_info.dart';
 import 'package:flutter/material.dart';
 
-import 'package:bitirme_projesi/screens/discover_screen/widgets/series_page_widget.dart';
-import 'package:bitirme_projesi/utils/colors_utils.dart';
+import '../../../../utils/colors_utils.dart';
+import '../../category_filter_screen/widgets/star_display.dart';
+import 'series_detail_screen.dart';
 
 class NewSeriesBox extends StatelessWidget {
-  final String seriesID;
-  const NewSeriesBox({Key? key, required this.seriesID}) : super(key: key);
+  final String tvShowName, tvShowImage, tvShowRating;
+  final int tvShowId;
+
+  const NewSeriesBox({
+    Key? key,
+    required this.tvShowId,
+    required this.tvShowName,
+    required this.tvShowImage,
+    required this.tvShowRating,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +24,13 @@ class NewSeriesBox extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (BuildContext context) => SeriesPage(
-              seriesID: seriesID,
+              tvShowId: tvShowId,
             ),
           ),
         );
       },
       child: Container(
         width: 190,
-        height: 310,
         margin: const EdgeInsets.only(left: 10),
         decoration: BoxDecoration(
           color: AppColors.primaryBlue,
@@ -44,8 +51,8 @@ class NewSeriesBox extends StatelessWidget {
                 topLeft: Radius.circular(10),
                 topRight: Radius.circular(10),
               ),
-              child: Image.asset(
-                seriesList[seriesID]!.seriesImageVertical,
+              child: Image.network(
+                tvShowImage,
                 height: 200,
                 width: 200,
                 fit: BoxFit.cover,
@@ -60,7 +67,7 @@ class NewSeriesBox extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    seriesList[seriesID]!.seriesName,
+                    tvShowName,
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -70,27 +77,34 @@ class NewSeriesBox extends StatelessWidget {
                   const SizedBox(
                     height: 5,
                   ),
-                  Text(
-                    seriesList[seriesID]!.seriesGenre,
-                    style: const TextStyle(
+                  const Text(
+                    "None Genres",
+                    style: TextStyle(
                       color: Colors.white54,
                     ),
                   ),
                   const SizedBox(height: 8),
                   Row(
                     children: [
-                      const Icon(
-                        Icons.star,
-                        color: Colors.amber,
-                      ),
-                      const SizedBox(width: 5),
-                      Text(
-                        seriesList[seriesID]!.seriesRating,
-                        style: const TextStyle(
-                          color: Colors.white54,
-                          fontSize: 16,
+                      IconTheme(
+                        data: const IconThemeData(
+                          color: Colors.cyanAccent,
+                          size: 20,
+                        ),
+                        child: StarDisplay(
+                          // value: int.parse(tvShowRating) * 5 ~/ 10,
+                          value:
+                              ((double.parse(tvShowRating) * 5) / 10).round(),
                         ),
                       ),
+                      Text(
+                        "  $tvShowRating/10",
+                        style: const TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w900,
+                          color: Colors.white70,
+                        ),
+                      )
                     ],
                   ),
                 ],

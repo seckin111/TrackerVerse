@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:bitirme_projesi/screens/profile_screen/widgets/rounded_check_box.dart';
-import 'package:bitirme_projesi/utils/colors_utils.dart';
-import 'package:bitirme_projesi/utils/series_info.dart';
+import '../../utils/colors_utils.dart';
+import '../../utils/series_info.dart';
+import 'widgets/rounded_check_box.dart';
 
 class EpisodeInfo extends StatefulWidget {
   final String seriesID;
@@ -13,8 +13,8 @@ class EpisodeInfo extends StatefulWidget {
 }
 
 class _EpisodeInfoState extends State<EpisodeInfo> {
-  @override
   int _selectedSeason = 1;
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.primaryBlue,

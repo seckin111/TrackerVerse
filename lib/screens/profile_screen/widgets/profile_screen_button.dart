@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:bitirme_projesi/screens/discover_screen/discover_screen.dart';
+import '../../discover_screen/discover_screen.dart';
 
 class PSButton extends StatefulWidget {
   const PSButton({super.key});

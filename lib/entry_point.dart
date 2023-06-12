@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 
-import 'package:bitirme_projesi/screens/discover_screen/discover_screen.dart';
-import 'package:bitirme_projesi/screens/profile_screen/profile_screen.dart';
-import 'package:bitirme_projesi/screens/home_screen/home_screen.dart';
-import 'package:bitirme_projesi/widgets/animated_bar.dart';
-import 'package:bitirme_projesi/utils/colors_utils.dart';
-import 'package:bitirme_projesi/models/rive_asset.dart';
-import 'package:bitirme_projesi/utils/rive_utils.dart';
+import 'models/rive_asset.dart';
+import 'screens/categories_screen/category_screen.dart';
+import 'screens/discover_screen/discover_screen.dart';
+import 'screens/profile_screen/profile_screen.dart';
+import 'utils/colors_utils.dart';
+import 'utils/rive_utils.dart';
+import 'widgets/animated_bar.dart';
 
 class EntryPoint extends StatefulWidget {
   const EntryPoint({super.key});
@@ -27,8 +27,8 @@ class _EntryPointState extends State<EntryPoint> {
       body: IndexedStack(
         index: _selectedIndex,
         children: const [
-          HomeScreen(),
           DiscoverScreen(),
+          CategoryPage(),
           ProfileScreen(),
         ],
       ),
